@@ -1,0 +1,32 @@
+* {
+    /* Fondos: negro y carbón */
+    base00: #000000;
+    base01: #08090B;
+    base02: #111318;
+    base03: #292C33;
+
+    /* Textos: gris frío y blanco plateado */
+    base04: #777D87;
+    base05: #B8BBC5;
+    base06: #D8D9E1;
+    base07: #F5F3F7;
+
+    /* Acentos */
+    base08: #D47D91;
+    base09: #C18A9C;
+    base0A: #C5B8D9;
+    base0B: #A5B8B0;
+    base0C: #A6BBCB;
+    base0D: #8E9DBB;
+    base0E: #B4A0C8;
+    base0F: #8E7888;
+}
+
+@import "multicolor-mapping.rasi"
+
+* {
+    bordercolor: transparent;
+    border-color: transparent;
+}
+
+@import "multicolor-common.rasi"

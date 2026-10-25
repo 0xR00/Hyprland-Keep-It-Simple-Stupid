@@ -1,0 +1,142 @@
+
+/* ================================================
+   WAYBAR — MINIMAL DARK · SINGLE BAR
+   ================================================ */
+
+* {
+  border: none;
+  border-radius: 0;
+  font-family: "JetBrainsMono Nerd Font", monospace;
+  font-size: 12px;
+  min-height: 0;
+}
+
+window#waybar {
+  background: rgba(0, 0, 0, 0.70);
+  color: #ebdbb2;
+  border-radius: 0;
+}
+
+/* Una única superficie para toda la barra */
+.modules-left,
+.modules-center,
+.modules-right {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  margin: 0;
+  padding: 0 8px;
+}
+
+/* ── WORKSPACES ── */
+#workspaces {
+  padding: 0 4px;
+}
+
+#workspaces button {
+    padding: 0 5px;
+    color: #3a3d45;        /* vacío — gris oscuro, casi invisible */
+    background: transparent;
+    font-size: 14px;
+    min-width: 0;
+    transition: all 0.15s ease;
+}
+
+#workspaces button.active {
+    color: #ffffff;        /* activo — blanco puro, como el pelo del personaje */
+    font-size: 16px;
+}
+
+#workspaces button:not(.empty):not(.active) {
+    color: #9ba8b5;        /* ocupado — gris azulado claro */
+}
+
+#workspaces button.urgent {
+    color: #c16d83;        /* urgente — rosa/rojo suave */
+}
+
+#workspaces button:hover {
+    background: transparent;
+    color: #dde3ea;
+    box-shadow: none;
+}
+
+/* ── CLOCK ── */
+#clock {
+  color: #ffffff;
+  font-size: 12px;
+  padding: 4px 8px;
+  font-weight: bold;
+}
+
+/* ── AUDIO ── */
+#pulseaudio {
+  color: #ffffff;
+  padding: 4px 6px;
+  font-weight: bold;
+}
+
+#pulseaudio.muted {
+  color: #ffffff;
+}
+
+/* ── TRAY ── */
+#tray {
+  padding: 4px 6px;
+}
+
+/* ── TASKBAR ── */
+#taskbar button {
+  padding: 0 4px;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  transition: all 0.15s ease;
+}
+
+#taskbar button.active {
+  background: rgba(235, 219, 178, 0.10);
+}
+
+#taskbar button:hover {
+  background: rgba(235, 219, 178, 0.08);
+}
+
+/* ── ARCH ── */
+#custom-arch {
+  color: #ffffff;
+  font-size: 16px;
+  padding: 4px 10px;
+}
+
+/* ── VPN ── */
+#custom-vpn {
+  color: #a9b665;
+  padding: 4px 8px;
+  font-weight: bold;
+}
+
+#custom-vpn.novpn {
+  color: #504945;
+}
+
+/* ── TARGET ── */
+#custom-target {
+  color: #ea6962;
+  font-weight: bold;
+  padding: 4px 8px;
+}
+
+/* ── TOOLTIPS ── */
+tooltip {
+  background: #1d2021;
+  border: 1px solid #3c3836;
+  border-radius: 6px;
+  color: #ebdbb2;
+}
+
+@keyframes blink {
+  to {
+    opacity: 0.3;
+  }
+}

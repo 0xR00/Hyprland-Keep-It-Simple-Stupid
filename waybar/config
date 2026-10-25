@@ -1,0 +1,84 @@
+{
+    "output": "DP-1",
+    "layer": "top",
+    "position": "top",
+    "height": 28,
+    "spacing": 0,
+    "margin-top": 0,
+    "margin-left": 0,
+    "margin-right": 0,
+    "width": 0,
+    "exclusive": true,
+    "gtk-layer-shell": true,
+    "passthrough": false,
+    "fixed-center": true,
+    "modules-left": [
+        "hyprland/workspaces"
+    ],
+    
+    "modules-center": [],
+    
+    "modules-right": [
+        "pulseaudio",
+        "clock"
+    ],
+    "custom/arch": {
+        "format": "󰣇 ",
+        "tooltip": false
+    },
+    "custom/target": {
+        "format": "󰓾 {}",
+        "exec": "cat ~/.config/waybar/target.txt 2>/dev/null || echo 'no target'",
+        "interval": 2,
+        "tooltip": false
+    },
+    "custom/vpn": {
+        "format": "{}",
+        "exec": "/home/miguel/.config/waybar/scripts/ethernet-vpn.sh",
+        "interval": 5,
+        "tooltip": false
+    },
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "default": "",
+            "active": "",
+            "empty": "",
+            "urgent": ""
+        },
+        "on-click": "activate",
+        "on-scroll-up": "hyprctl dispatch workspace e+1",
+        "on-scroll-down": "hyprctl dispatch workspace e-1",
+        "active-only": false,
+        "show-special": false
+    },
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "icon-size": 18,
+        "tooltip": true,
+        "tooltip-format": "{title}",
+        "on-click": "activate",
+        "on-click-right": "close",
+        "sort-by-app-id": true
+    },
+    "clock": {
+        "timezone": "Europe/Madrid",
+        "format": "  {:%I:%M %p}",
+        "interval": 1,
+        "tooltip": false
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "󰖁",
+        "format-icons": {
+            "default": ["󰕿", "󰖀", "󰕾"]
+        },
+        "on-click": "pavucontrol",
+        "scroll-step": 5,
+        "tooltip": false
+    },
+    "tray": {
+        "icon-size": 14,
+        "spacing": 6
+    }
+}
