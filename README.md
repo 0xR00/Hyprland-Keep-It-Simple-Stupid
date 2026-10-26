@@ -1,6 +1,6 @@
 # Hyprland -- Keep It Simple Stupid
 
 > [!IMPORTANT]
-> La configuración esta adaptada a 2 monitores y un equipo con una gráfica con NVIDIA.
+> The configuration is optimized for two monitors and a computer with an NVIDIA graphics card.
 
 ![](/screenshots/1.png)
